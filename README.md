@@ -1,4 +1,5 @@
-# PROJE1.2
+# websitesi
+
 sayfalar yedi html sayfalar olacak ve bir yada daha fazla css sayfasi olacak 
 anassyfa hakkinda cv api memleketim iletisim login 
 bunlar style css dosyasina baglayacagiz 
