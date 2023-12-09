@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="login.css">
+   
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="/photo/artificial-intelligence.png">
+    <title>Bessem Hüseydi</title>
+</head>
+<body>
+
+    <header class="header">
+        <a href="/index.html" class="logo">BESSEM</a>
+        <div class="bx bx-menu" id="menu-icon"> </div>
+        <nav class="navbar">
+           
+            <a href="index.html" class="active" >Home</a>
+            <a href="hakkimda.html"> About</a>
+            <a href="apı.html">Api </a>
+            <a href="memleket.html">Home towe </a>
+            <a href="CV.html">CV</a>
+            <a href="iletisim.html">Contact</a>
+            <a href="login.html">Login</a>
+          <span class="active-nav"></span>        
+        </nav>
+        
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="login-box">
+    <div class="login-header">
+        <header>Login</header>
+    </div>
+    <div class="input-box">
+        <input type="text" class="input-field" placeholder="Email" autocapitalize="off" required id="user" name="user-name" autocomplete="of">
+    </div>
+    <div class="input-box">
+        <input type="password" class="input-field" placeholder="password" autocapitalize="off" required name="user-password" id="pass" autocomplete="of">
+    </div>
+    <div class="forgot">
+        <section>
+            <input type="checkbox" id="check">
+            <label for="check">Remember me</label>
+        </section>
+        <section>
+            <a href="3">Fotgot password</a>
+        </section>
+    </div>
+    <div class="input-submit">
+        <button class="submit-btn" id="submit"></button>
+        <label for="submit"> sign in</label>
+    </div>
+    <div class="sign-up-link">
+        <p>Don't Have account <a href="#">sign up</a></p>
+    </div>
+</div>
+
+
+ <script>
+   
+    document.getElementById('submit').addEventListener('click', function () {
+        var username = document.getElementById('user').value;
+        var password = document.getElementById('pass').value;
+
+        if (username === 'b1812100001@sakarya.edu.tr' && password === 'b1812100001') {
+            alert('Başarılı giriş!');
+        
+          
+        } else {
+            alert('Hatalı kullanıcı adı veya şifre!');
+        }
+    });
+
+    let menuIcon=document.querySelector('#menu-icon');
+let navbar=document.querySelector('.navbar');
+
+menuIcon.onclick=()=>{
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
+
+
+let sections=document.querySelectorAll('section');
+let navlinks=document.querySelectorAll('header nav a');
+
+window.onscroll=()=>{
+    sections.forEach(sec=>{
+        let top =window.scrollY;
+        let offset=sec.offsetTop-100;
+        let height=sec.offsetHeight;
+        let id=sec.getAttribute('id');
+
+        if(top>=offset&&top<offset+height){
+            
+            navlinks.forEach(links =>{
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*='+ id +']').classList.add('active');
+
+            });
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+    let header=document.querySelector('header');
+    header.classList.toggle('sticky',window.scrollY>100);
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+
+}
+
+</script>
+
+</body>
+</html>

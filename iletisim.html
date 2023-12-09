@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="photo/artificial-intelligence.png">
+    <title>Bessem Hüseydi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">BESSEM</a>
+        <div class="bx bx-menu" id="menu-icon"> </div>
+        <nav class="navbar">
+           
+            <a href="index.html" class="active" >Home</a>
+            <a href="hakkimda.html"> About</a>
+            <a href="apı.html">Api </a>
+            <a href="memleket.html">Home towe </a>
+            <a href="CV.html">CV</a>
+            <a href="iletisim.html">Contact</a>
+            <a href="login.html">Login</a>
+          <span class="active-nav"></span>        
+        </nav>
+        
+    </header>
+
+
+
+ <section class="cards" id="content">
+    <h2 class="title">İletişim Yolları</h2>
+    <div class="content">
+        <div class="card form" >
+        
+            <form name="formmy" onsubmit="return bilgikontrolu()" action="goster.php" method="post">
+                <input type="text" class="input-field" placeholder="Name" name="name" id="name"><br>
+                <input type="text" class="input-field" placeholder="Email" name="Email" id="Email"><br>
+                <input type="password" class="input-field" placeholder="Your Password" name="Password" id="password"><br>
+                <textarea name="text" class="input-field textatea-field" placeholder="Your Massage" name="Massage" id="massage"></textarea>
+                <input type="file" name="dosya" value="dosya sec" style="color: black;" id="dosya"><br>
+                <select name="dersler" style="margin: 15px;">
+                    <option value="WEB">WEB</option>
+                    <option value="C#">C#</option>
+                    <option value="C++" selected>C++</option>
+                    <option value="C">C</option>
+                </select><br>
+                <button type="button" class="btn" onclick="bilgikontrolu() " value="submit">Send Message</button>
+                <input type="reset" class="btn" value="Clear!">
+               
+            </form>
+            <button style=" border-radius: 5px;"><a href="goster.php"  style="text-decoration: none;color: black;font-size: 15px;">Gonderilen bilgileri gormek icin tiklayiniz</a></button>
+            
+       </div>    
+    </div>
+</section> 
+
+
+
+
+
+    <section class="cards" id="content">
+        <h2 class="title"></h2>
+        <div class="content">
+                   
+            <div class="card">
+                <img src="photo/tn2.jpeg" alt="bizim ev" >
+                <div class="icon"><i class='bx bx-phone'></i></div>
+                <div class="info">
+                    <h3> Telefon</h3>
+                    <p><br><br><phone-namber> +905366677742</phone-namber></p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="photo/email.jpeg" alt="bizim ev" >
+                <div class="icon"><i class='bx bx-envelope' ></i></div>
+                <div class="info">
+                    <h3>E-mail</h3>
+                    <p>bessem0987@gmail.com<Address style="color: #fff;font-size: 5wv;"> <a href="mailto:bessem0987@gmail.com">send me Email</a></Address></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="photo/add.png" alt="bizim ev" >
+                <div class="icon"><i class='bx bx-map-alt'></i></div>
+                <div class="info">
+                    <h3>Address</h3>
+                    <p><Address style="color: #fff;">Hatay-iskerderun mustafa kemal cadesi. Mah. Spor Sokak No:90</Address></p>
+                </div>
+            </div>         
+        </div>
+        <br><br><br><br><br><br>
+        </b>
+    </section> 
+
+
+
+
+
+    <footer class="footer">
+        <p class="footer-title">  <span>Bessem Hüseydi</span></p>
+        <div class="socail-icons">
+           <a href="https://www.instagram.com/baxs_xm/" style="color: #fff;"><i class='bx bxl-instagram'></i></a>
+          <a href="https://twitter.com/bessem53674368?t=0fhBajCVCAa2zWsX0S8eyQ&s=09" style="color: #fff;" ><i class='bx bxl-twitter'></i></a>
+          <a href="https://github.com/baxs-mx" style="color: #fff;"><i class='bx bxl-github'></i></a>
+       </div>
+    </footer>
+    <script>
+        function bilgikontrolu() {
+            // Formdaki giriş alanlarını kontrol et
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('Email').value;
+            var password = document.getElementById('password').value;
+            var massage = document.getElementById('massage').value;
+    
+            // Gerekli alanların dolu olup olmadığını kontrol et
+            if (name === '' || email === '' || password === '' || massage === '') {
+                alert('Lütfen tüm alanları doldurun!');
+                return false; // Formun gönderilmesini engellemek için false döndür
+            }else{
+                alert( 'Hos geldiniz sayin : '+name+' mesajiniz iletiliyor');
+                return false; 
+
+            }
+    
+            // Ek kontroller yapabilirsiniz
+    
+            return true; // Formun gönderilmesine izin vermek için true döndür
+        }
+    
+        function sendMessage() {
+            // Mesaj gönderme işlemleri burada gerçekleştirilebilir
+            alert('Mesaj gönderiliyor...');
+        }
+        let menuIcon=document.querySelector('#menu-icon');
+let navbar=document.querySelector('.navbar');
+
+menuIcon.onclick=()=>{
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
+
+
+let sections=document.querySelectorAll('section');
+let navlinks=document.querySelectorAll('header nav a');
+
+window.onscroll=()=>{
+    sections.forEach(sec=>{
+        let top =window.scrollY;
+        let offset=sec.offsetTop-100;
+        let height=sec.offsetHeight;
+        let id=sec.getAttribute('id');
+
+        if(top>=offset&&top<offset+height){
+            
+            navlinks.forEach(links =>{
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*='+ id +']').classList.add('active');
+
+            });
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+    let header=document.querySelector('header');
+    header.classList.toggle('sticky',window.scrollY>100);
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+
+}
+    </script>
+
+        </body>
+      </html>
